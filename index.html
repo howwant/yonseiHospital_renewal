@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>인천연세병원</title>
+  <!--파비콘-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#274bc1">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+<!--스타일시트-->
+  <link rel="stylesheet" href="/scss/layout.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<!--슬릭 슬라이더-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="/js/main.js"></script>
+
+</head>
+<body>
+  <header id="header">
+    <nav class="util">
+      <ul class="content">
+        <li><a href="#none"><i class="xi-user-o"></i>로그인</a></li>
+        <li><a href="#none">회원가입</a></li>
+        <li><a href="#none">고객센터</a></li>
+      </ul>
+    </nav>
+    <div class="nav content">
+      <h1><img src="/img/logo.png" alt="logo"></h1>
+      <ul class="depth_01">
+        <li><div class="bg"></div></li>
+        <li>
+          <a href="#none">병원소개</a>
+          <ul class="depht_02">
+            <li><a href="#none">인사말</a></li>
+            <li><a href="#none">의료진소개</a></li>
+            <li><a href="#none">조직도</a></li>
+            <li><a href="#none">층별안내</a></li>
+            <li><a href="#none">의료장비소개</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none">이용안내</a>
+          <ul  class="depth_02">
+            <li><a href="#none">진료시간</a></li>
+            <li><a href="#none">오시는 길</a></li>
+            <li><a href="#none">외래진료안내</a></li>
+            <li><a href="#none">입원퇴원수속안내</a></li>
+            <li><a href="#none">건강보험안내</a></li>
+            <li><a href="#none">제증명서류 발급안내</a></li>
+            <li><a href="#none">전화번호 안내</a></li>
+            <li><a href="#none">비급여수가표</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none">진료과목</a>
+          <ul  class="depth_02">
+            <li><a href="#none">종합검진센터</a></li>
+            <li><a href="#none">정형외과</a></li>
+            <li><a href="#none">외과</a></li>
+            <li><a href="#none">내과</a></li>
+            <li><a href="#none">영상의학과</a></li>
+            <li><a href="#none">진단검사의학과</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#none">커뮤니티</a>
+          <ul  class="depth_02">
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="#none">온라인문의</a></li>
+            <li><a href="#none">자주묻는 질문</a></li>
+            <li><a href="#none">스포츠선수촌</a></li>
+            <li><a href="#none">구인/구직</a></li>
+            <li><a href="#none">치료후기</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="searh_box"><input type="checkbox" id="searh">
+        <label for="searh"><i class="xi-search"></i></label>
+        <div>
+          <div class="margin">
+            <input type="text" placeholder="검색어를 입력하세요">
+            <input type="submit" name="제출" value="제출" id="submit">
+            <label for="submit"><i class="xi-search"></i></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="banner_box">
+    <p>
+      <span>환자의 입장에서 생각하는 인천연세병원</span>
+      <span></span>
+    </p>
+    <div id="mainBanner">
+      <div class="main_01"><a href="#none"></a></div>
+      <div class="main_02"><a href="#none"></a></div>
+    </div>
+  </section>
+  <section id="reserv">
+    <div class="bg_blue"></div>
+    <div class="content">
+      <p>간편예약신청</p>
+      <ul>
+        <li>
+          <input type="checkbox" name="person" value="person" id="person">
+          <label for="person"><i class="xi-check-min"></i></label>
+          <label for="person">개인정보 보호정책 동의</label>
+          <a href="#none">전문보기<i class="xi-angle-right-min"></i></a>
+        </li>
+        <li>
+          <p>이름</p>
+          <input type="text" placeholder="이름입력">
+        </li>
+        <li>
+          <p>전화번호</p>
+          <input type="text" placeholder="'-'를 제외하고 숫자만 입력">
+          <button type="button" name="button">
+            예약신청<i class="xi-angle-right-min"></i></button>
+        </li>
+        <li>
+          <span>i</span>
+          <p>전문 상담원이 전화를 드려<br>
+            진료 예약을 도와 드립니다.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="call">
+    <ul class="content">
+      <li class="call_l">
+        <ul>
+          <li>
+          <img src="/img/tel_i1.png" alt="">
+          </li>
+          <li>
+            <a href="#none">
+              <span class="f_color_01">대표전화</span><br>
+              <span>032.000.000</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>
+          <img src="/img/tel_i2.png" alt="">
+          </li>
+          <li>
+            <a href="#none">
+              <span class="f_color_02">응급의료센터</span><br>
+              <span>032.000.000</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>
+          <img src="/img/tel_i3.png" alt="">
+          </li>
+          <li>
+            <a href="#none">
+              <span class="f_color_03">종합건강증진센터</span><br>
+              <span>032.000.000</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>
+          <img src="/img/tel_i5.png" alt="">
+          </li>
+          <li>
+            <a href="#none">
+              <span class="f_color_04">국가검진</span><br>
+              <span>032.000.000</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>
+          <img src="/img/tel_i4.png" alt="">
+          </li>
+          <li>
+            <a href="#none">
+              <span class="f_color_05">진료협력문의</span><br>
+              <span>032.000.000</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <section id="about">
+    <ul>
+      <li><a href="#none">
+        <span>진료과/센터</span>
+      </a></li>
+      <li><a href="#none">
+        <span>진로예약</span>
+      </a></li>
+      <li><a href="#none">
+        <span>의무기록<br>
+          사본발급안내</span>
+      </a></li>
+      <li><a href="#none">
+        <span>오시는길</span>
+      </a></li>
+      <li><a href="#none">
+        <span>둘러보기</span>
+      </a></li>
+      <li><a href="#none">
+        <span>주요장비</span>
+      </a></li>
+    </ul>
+  </section>
+  <section id="ad">
+    <div class="content">
+      <div class="img">
+        <div><img src="/img/ad_01.jpg" alt=""></div>
+        <div><img src="/img/ad_02.jpg" alt=""></div>
+        <div><img src="/img/ad_03.jpg" alt=""></div>
+        <div><img src="/img/ad_04.jpg" alt=""></div>
+        <div><img src="/img/ad_05.png" alt=""></div>
+      </div>
+      <ul class="tab">
+          <li>
+            <input type="radio" name="radio" id="box_01" checked>
+            <label for="box_01">공지사항</label>
+            <div class="ab_box">
+              <ul>
+                <li><a href="#none">
+                  <span>인천연세병원 개원 10주년기념 검색이벤트 진행(~31)</span>
+                  <span>2021-05-03</span>
+                </a></li>
+                <li><a href="#none">
+                  <span>2121년 가정의달 5월 공휴일 진료일정 안내</span>
+                  <span>2021-04-20</span>
+                </a></li>
+                <li><a href="#none">
+                  <span>인천연세병원 하지정맥류클리닉 '하지정맥류증상의 종류'</span>
+                  <span>2021-03-23</span>
+                </a></li>
+                <li><a href="#none">
+                  <span>인천연세병원 입원 전 코로나19검사 안내</span>
+                  <span>2021-02-24</span>
+                </a></li>
+                <li><a href="#none">
+                  <span>인천연세병원 방문하고 영수증리뷰 남기면 선물이 팡팡!</span>
+                  <span>2021-01-13</span>
+                </a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="radio" id="box_02" >
+            <label for="box_02">온라인문의</label>
+            <div class="ab_box">
+              <ul>
+                <li><a href="#none">
+                  <span>어느과에 진료받아야 될지 문의드려요.</span>
+                  <span>2021-05-01</span>
+                </a></li>
+                <li><a href="#none">
+                  <span>등 지방종제거</span>
+                  <span>2021-04-21</span>
+                </a></li>
+                <li><a href="#none">
+                  <span>치료후기 작성 제출 방법 문의</span>
+                  <span>2021-03-15</span>
+                </a></li>
+                <li><a href="#none">
+                  <span>Mri및 입원관련 문의드립니다.</span>
+                  <span>2021-03-15</span>
+                </a></li>
+                <li><a href="#none">
+                  <span>건강검진 문의</span>
+                  <span>2021-03-05</span>
+                </a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+    </div>
+  </section>
+  <section id ="part" class="content">
+    <h2>전문진료분야</h2>
+    <ul>
+      <li><a href="#none">
+        <img src="/img/part_01.png" alt="">
+        <span>정형외과</span><br>
+        <span>퇴행성 관절염, 류마티스 관절염, 무지외반증, <br>
+          수근관증후군(손저림), 인공관절 치환술,<br>
+          관절 내시경술, 프롤로테라피</span>
+      </a></li>
+      <li><a href="#none">
+        <img src="/img/part_02.png" alt="">
+        <span>외과</span><br>
+        <span>하지정맥류, 위 내시경, 대장내시경,<br>
+              수면 내시경, 치핵, 치열, 항문소양증,<br>
+              항문콘딜로마, 작장탈출증</span>
+      </a></li>
+      <li><a href="#none">
+        <img src="/img/part_03.png" alt="">
+        <span>내과</span><br>
+        <span>소화기내시경(위·대장)검사,<br>
+              초음파, 근전도, 심전도, 건강 증진,<br>
+              각종 내과검진, 수술 전·후 검사</span>
+      </a></li>
+      <li><a href="#none">
+        <img src="/img/part_04.png" alt="">
+        <span>종합검진센터</span><br>
+        <span>종합검진센터에서는 검진을 위한 최신시설과 <br>
+          쾌적한 환경으로 차별화된 서비스로 <br>
+          당신의 건강인생을 함께 설계합니다.</span>
+      </a></li>
+    </ul>
+  </section>
+  <footer>
+    <div class="content">
+      <img src="/img/flogo.png" alt="">
+      <div>
+        <div class="large">
+          <a href="#none">개인정보처리방침</a>
+          <a href="#none">이용약관</a>
+          <a href="#none">ADMIN</a>
+        </div>
+        <div class="small">
+          <span>인천연세병원</span>
+          <span>대표: 강화원</span>
+          <span>인천광역시 서구 원당대로 685번길 30</span>
+          <span>고객센터: 000-000-0000 </span>
+          <span>사업자등록번호: 000-00-00000</span>
+          <span>Copyright 인천연세병원. All rights reserved.</span>
+      </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
