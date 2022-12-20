@@ -584,7 +584,7 @@ a {
     display: block;
     clear: both;
   }
-  li{
+  > li{
     float: left;
     width: 50%;
     input{
@@ -637,7 +637,8 @@ a {
         li{
           border-bottom: 1px solid #ccc;
           width: 100%;
-          line-height: 59px;
+          line-height: 37px;
+          padding-top: 10px;
           &:hover{
             a{
               font-weight: bold;
@@ -660,7 +661,6 @@ a {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              float: left;
               padding-left: 40px;
               &:before{
                 content: "";

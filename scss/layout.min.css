@@ -473,20 +473,20 @@ a {
       content: "";
       display: block;
       clear: both; }
-    #ad .tab li {
+    #ad .tab > li {
       float: left;
       width: 50%; }
-      #ad .tab li input {
+      #ad .tab > li input {
         display: none; }
-        #ad .tab li input:checked + label {
+        #ad .tab > li input:checked + label {
           background-color: #014fa6;
           color: #fff;
           margin-bottom: 17px; }
-        #ad .tab li input:checked + label + .ab_box {
+        #ad .tab > li input:checked + label + .ab_box {
           z-index: 3; }
-        #ad .tab li input:checked + label:after {
+        #ad .tab > li input:checked + label:after {
           opacity: 1; }
-      #ad .tab li label {
+      #ad .tab > li label {
         position: relative;
         display: block;
         color: #000;
@@ -494,7 +494,7 @@ a {
         line-height: 40px;
         font-size: 20px;
         width: 98%; }
-        #ad .tab li label:after {
+        #ad .tab > li label:after {
           content: "";
           display: block;
           position: absolute;
@@ -506,7 +506,7 @@ a {
           border-right: 10px solid transparent;
           border-left: 10px solid transparent;
           opacity: 0; }
-      #ad .tab li .ab_box {
+      #ad .tab > li .ab_box {
         position: absolute;
         top: calc(100% + 1px);
         left: 0;
@@ -514,22 +514,23 @@ a {
         width: 100%;
         height: 300px;
         z-index: 1; }
-        #ad .tab li .ab_box ul li {
+        #ad .tab > li .ab_box ul li {
           border-bottom: 1px solid #ccc;
           width: 100%;
-          line-height: 59px; }
-          #ad .tab li .ab_box ul li:hover a {
+          line-height: 37px;
+          padding-top: 10px; }
+          #ad .tab > li .ab_box ul li:hover a {
             font-weight: bold; }
-          #ad .tab li .ab_box ul li:hover a span:first-child {
+          #ad .tab > li .ab_box ul li:hover a span:first-child {
             font-weight: bold; }
-          #ad .tab li .ab_box ul li a {
+          #ad .tab > li .ab_box ul li a {
             display: block;
             color: #222; }
-            #ad .tab li .ab_box ul li a:after {
+            #ad .tab > li .ab_box ul li a:after {
               display: block;
               content: '';
               clear: both; }
-            #ad .tab li .ab_box ul li a span:first-child {
+            #ad .tab > li .ab_box ul li a span:first-child {
               display: inline-block;
               font-weight: 300;
               font-size: 17px;
@@ -537,9 +538,8 @@ a {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              float: left;
               padding-left: 40px; }
-              #ad .tab li .ab_box ul li a span:first-child:before {
+              #ad .tab > li .ab_box ul li a span:first-child:before {
                 content: "";
                 display: inline-block;
                 width: 3px;
@@ -547,10 +547,10 @@ a {
                 background-color: #222;
                 border-radius: 50%;
                 margin: 0px 14px 5px 0; }
-            #ad .tab li .ab_box ul li a span:nth-child(2) {
+            #ad .tab > li .ab_box ul li a span:nth-child(2) {
               float: right;
               padding-right: 40px; }
-        #ad .tab li .ab_box ul li:last-child {
+        #ad .tab > li .ab_box ul li:last-child {
           border-bottom: 0; }
     #ad .tab li:nth-child(2) label {
       margin-left: 2%; }
