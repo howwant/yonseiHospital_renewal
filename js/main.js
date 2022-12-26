@@ -10,7 +10,7 @@ $(document).ready(function(){
     slidesToShow: 1,
     adaptiveHeight: true
   });
-  $('.img').slick({
+  $('.img-slider').slick({
     slide: 'div',
     autoplay : true,
     infinite: true,
