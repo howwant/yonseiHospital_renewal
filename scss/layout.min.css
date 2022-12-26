@@ -490,7 +490,7 @@ img {
 
 #ad {
   background-color: #ececec;
-  padding: 40px 0 20px;
+  padding: 40px 0;
 }
 #ad .container {
   display: flex;
@@ -578,7 +578,7 @@ img {
   left: calc(50% - 10px);
   width: 0px;
   height: 0px;
-  border-bottom: 5px solid none;
+  border-bottom: 0;
   border-top: 10px solid #014fa6;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
@@ -587,42 +587,44 @@ img {
 
 .ab_box {
   position: absolute;
-  bottom: 0;
+  top: 59px;
   left: 0;
   background-color: #fff;
   width: 100%;
-  height: 300px;
+  height: calc(100% - 59px);
   z-index: 1;
 }
-.ab_box li {
-  border-bottom: 1px solid #ccc;
-  width: 100%;
-  line-height: 37px;
-  padding-top: 10px;
+.ab_box ul {
+  height: 100%;
 }
-.ab_box li:last-child {
+.ab_box ul li {
+  border-bottom: 1px solid #ccc;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ab_box ul li:last-child {
   border-bottom: 0;
 }
-.ab_box li:hover a {
+.ab_box ul li:hover a {
   font-weight: bold;
 }
-.ab_box li:hover a span:first-child {
+.ab_box ul li:hover a span:first-child {
   font-weight: bold;
 }
-.ab_box li a {
+.ab_box ul li a {
   display: block;
   color: #222;
 }
-.ab_box li a span:first-child {
+.ab_box ul li a span {
   display: inline-block;
+}
+.ab_box ul li a span:first-child {
   font-weight: 300;
   font-size: 17px;
-  word-wrap: normal;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
-.ab_box li a span:first-child:before {
+.ab_box ul li a span:first-child:before {
   content: "";
   display: inline-block;
   width: 3px;
@@ -630,10 +632,6 @@ img {
   background-color: #222;
   border-radius: 50%;
   margin: 0px 14px 5px 0;
-}
-.ab_box li a span:nth-child(2) {
-  float: right;
-  padding-right: 40px;
 }
 
 #expertise {
@@ -729,16 +727,107 @@ footer .container > div .large a:hover {
 footer .container > div .large a:last-child:after {
   display: none;
 }
-footer .container > div .small {
-  width: 600px;
-}
 footer .container > div .small span {
   display: inline-block;
-  line-height: 16px;
   font-size: 12px;
   color: #838383;
   padding-right: 10px;
   line-height: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  .util-menu ul, .nav-box, .reserve-box {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .information, .ab_box ul li a span:nth-child(2), #expertise ul li a br {
+    display: none;
+  }
+  .reserve-title {
+    font-size: 25px;
+  }
+  #shortCutCall .container > li img {
+    max-width: 32px;
+  }
+  #shortCutCall .container > li a span:nth-child(1), #shortCutCall .container > li a span:nth-child(3) {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #shortCutAbout ul li a {
+    height: 150px;
+  }
+  #shortCutAbout ul li a span {
+    font-size: 15px;
+    padding-top: 96px;
+  }
+  #reserve {
+    display: none;
+  }
+  #ad .slick-dotted.slick-slider {
+    width: calc(98% - 500px);
+  }
+  #ad .container {
+    justify-content: space-between;
+  }
+  .tab {
+    min-width: 500px;
+    margin: 0 0 0 2%;
+  }
+}
+@media screen and (max-width: 930px) {
+  #mainBanner div a {
+    height: 400px;
+  }
+  #shortCutCall .container > li img {
+    display: none;
+  }
+  #shortCutCall .container > li a {
+    margin: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 880px) {
+  #mainBanner div a {
+    height: 300px;
+  }
+  #ad .slick-dotted.slick-slider {
+    display: none;
+  }
+  .tab {
+    height: 300px;
+    width: 100%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #expertise {
+    margin: 20px auto;
+  }
+  #mainBanner div a {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #banner_box p {
+    display: none;
+  }
+  #expertise ul li a span {
+    display: none;
+  }
+  #shortCutCall .container {
+    overflow: scroll;
+  }
+  #shortCutCall .container > li {
+    min-width: 138px;
+  }
+  #shortCutAbout ul {
+    overflow: scroll;
+  }
+  #shortCutAbout ul li {
+    min-width: 100px;
+  }
 }
 
 /*# sourceMappingURL=layout.min.css.map */
