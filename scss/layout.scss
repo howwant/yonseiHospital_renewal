@@ -6,8 +6,10 @@
   content: '';
   clear:both;
 }
+
+//////////////////////////////////////////////////// 공통 css
 .content{
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 * {
@@ -20,6 +22,12 @@ ul, ol, dl {
 a {
   text-decoration: none;
 }
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+//////////////////////////////////////////////////// header 
 #header{
    font-family: 'Noto Sans KR', sans-serif;
    position: relative;
@@ -42,12 +50,10 @@ a {
       }
     }
   }
-  .nav{
-    &:after{
-      @include clear;
-    }
+  .nav-box{
+    display: flex;
+    justify-content: space-between;
     h1{
-      float: left;
       width: 190px;
       margin-top: 16px;
       img{
@@ -55,18 +61,15 @@ a {
         width: 100%;
       }
     }
-    ul.depth_01{
-      float: left;
-      margin-left: 94px;
+    .menu{
+      display: flex;
+      width: calc(100% - 230px);
       &:hover li:first-child div.bg{
         height: 300px;
       }
       &:hover ul{
          height: 300px;
        }
-      &:after{
-        @include clear;
-      }
       li:first-child{
         position: static;
         div.bg{
@@ -82,8 +85,10 @@ a {
           z-index: 3;
         }
       }
+      > li:not(:first-child) {
+        width: 25%;
+      }
       > li{
-        float: left;
         position: relative;
         &:hover > a{
            color: #014fa6;
@@ -94,7 +99,7 @@ a {
           line-height: 90px;
           color: #222;
           transition: 0.3s;
-          width: 200px;
+          max-width: 200px;
           display: block;
           text-indent: 33px;
         }
@@ -131,8 +136,7 @@ a {
       }
     }
   }
-  div.searh_box{
-    float: left;
+  .searh_box{
     margin-left: 15px;
     > input{
       display: none;
@@ -181,6 +185,8 @@ a {
     }
   }
 }
+
+//////////////////////////////////////////////////// banner_box 
 #banner_box{
   position: relative;
   p{
@@ -261,6 +267,8 @@ a {
     }
   }
 }
+
+//////////////////////////////////////////////////// reserve 예약
 #reserv{
   font-family: 'Noto Sans KR', sans-serif;
   background-color: #1161bc;
@@ -275,12 +283,8 @@ a {
   }
   >div.content{
     position: relative;
-    &:after{
-      @include clear;
-    }
     >p:first-child{
       position: absolute;
-      float: left;
       font-size: 30px;
       font-weight: 500;
       line-height: 100px;
@@ -292,16 +296,13 @@ a {
       color: #fff;
     }
     ul{
-      float: left;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
       margin-left: 240px;
       height: 100px;
-      &:after{
-        @include clear;
-      }
       li{
-        float: left;
         margin-top: 26px;
-        padding-left: 16px;
         input[type="checkbox"]{
           display: none;
           &:checked + label i{
@@ -344,6 +345,7 @@ a {
       }
       li:first-child{
         width: 188px;
+        padding-left: 16px;
       }
       li:nth-child(2),li:nth-child(3){
         position: relative;
@@ -360,9 +362,9 @@ a {
           width: 225px;
         }
         button{
+          margin-left: 4px;
           background-color: #00a8e0;
           color: #fff;
-          display: inline-block;
           outline: 0;
           border: 0;
           line-height: 43px;
@@ -379,9 +381,7 @@ a {
       }
       li:nth-child(3){
         padding-left: 4px;
-        input{
-          margin-top: -2px;
-        }
+        display: flex;
       }
       li:last-child{
         padding-top: 3px;
@@ -407,11 +407,10 @@ a {
         }
       }
     }
-    div{
-      float: left;
-    }
   }
 }
+
+//////////////////////////////////////////////////// call
 #call{
   border-bottom: 1px solid #cce;
   font-family: 'Noto Sans KR', sans-serif;
@@ -471,9 +470,11 @@ a {
     }
   }
 }
+
+//////////////////////////////////////////////////// about icon
 #about{
   margin: 60px auto;
-  width: 1280px;
+  max-width: 1280px;
   ul{
     &:after{
       @include clear;
@@ -524,6 +525,8 @@ a {
     }
   }
 }
+
+//////////////////////////////////////////////////// ad
 #ad{
   background-color: #ececec;
   padding: 40px 0 20px;
@@ -689,6 +692,8 @@ a {
     }
   }
 }
+
+//////////////////////////////////////////////////// 전문진료분야
 #part{
   margin: 75px auto;
   text-align: center;
@@ -749,6 +754,8 @@ a {
     }
   }
 }
+
+//////////////////////////////////////////////////// footer
 footer{
   background-color: #0f1a2d;
   padding: 30px;
@@ -799,4 +806,19 @@ footer{
       }
     }
   }
+}
+//////////////////////////////////////////////////// 반응형
+@media screen and (max-width: 1024px)  {
+  #header .content {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 768px)  {
+  
+}
+@media screen and (max-width: 480px)  {
+  
+}
+@media screen and (max-width: 375px)  {
+  
 }
