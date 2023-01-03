@@ -32,4 +32,20 @@ $(document).ready(function(){
   $("#ad .img .slick-next").append(
     '<i class="xi-angle-right-min"></i>'
   );
+  //mobile
+  $('.sidemenu').click(function(){
+    $('.sidemenu-box').addClass('show');
+  });
+  $('.closemenu').click(function(){
+    $('.sidemenu-box').removeClass('show');
+  });
+
+  $('.toggleDown').click(function(){
+    const submenu = $(this).next('ul');
+    if( submenu.is(":visible") ){
+      submenu.slideUp();
+    }else{
+        submenu.slideDown();
+    }
+  });
 });

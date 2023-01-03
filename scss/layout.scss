@@ -25,7 +25,9 @@ img {
   max-width: 1280px;
   margin: 0 auto;
 }
-
+.mobile {
+  display: none;
+}
 //////////////////////////////////////////////////// header 
 #header{
    position: relative;
@@ -128,6 +130,9 @@ img {
       line-height: 36px;
       text-indent: 33px;
       transition: 0.3s;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
   }
 }
@@ -604,8 +609,13 @@ img {
       a{
         display: block;
         color: #222;
+        width: 100%;
         span {
           display: inline-block;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          width: 100%;
           &:first-child{
             font-weight: 300;
             font-size: 17px;
@@ -725,6 +735,65 @@ footer{
     }
   }
 }
+.sidemenu-box {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 0 16px #444;
+  padding: 37px 10px 10px;
+  text-align: start;
+  transition: 0.3s;
+  .closemenu {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-weight: 700;
+    font-size: 21px;
+  }
+  > ul > li > a {
+    font-weight: bold;
+  }
+  ul li a {
+    padding: 6px 0;
+    width: 100%;
+    display: block;
+    color: #555;
+  }
+  .side-depth_02 {
+    overflow: hidden;
+    font-size: 14px;
+    text-indent: 10px;
+     a {
+      color: #000;
+     }
+  }
+  .search {
+    border-top: 1px solid #ccc;
+    padding-top: 7px;
+    input[type="text"]{
+      outline: none;
+      border-radius: 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      height: 23px;
+      text-indent: 5px;
+    }
+    #submit{
+      display: none;
+    }
+    i {
+      font-weight: 700;
+      font-size: 17px;
+    }
+  }
+} 
+.show {
+  right: 0!important;
+}
+.hide {
+  display: none;
+}
 //////////////////////////////////////////////////// 반응형
 @media screen and (max-width: 1300px)  {
   .util-menu ul, .nav-box, .reserve-box {
@@ -772,6 +841,12 @@ footer{
     min-width: 500px;
     margin: 0 0 0 2%;
   }
+  #shortCutAbout {
+    margin-top: 0;
+  }
+  #expertise {
+    margin: 60px auto;
+  }
 }
 @media screen and (max-width: 930px) {
   #mainBanner div a{
@@ -801,14 +876,45 @@ footer{
   }
 }
 @media screen and (max-width: 768px)  {
+  .pc {
+    display: none!important;
+  }
+  .mobile {
+    display: block;
+  }
+  .nav-box h1 {
+    max-height: 62px;
+  }
   #expertise {
-    margin: 20px auto;
+    margin: 20px;
+    ul li a span {
+      display: none;
+    }
   }
   #mainBanner div a{
     height: 250px;
   }
+  .sidemenu i {
+    font-size: 30px;
+  }
+  footer{
+    padding: 10px;
+    .container {
+      flex-wrap: wrap;
+      img {
+        width: 100%;
+      }
+      > div {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+  } 
 }
 @media screen and (max-width: 700px)  {
+  .tab {
+    min-width: auto;
+  }
   #banner_box p {
     display: none;
   }
@@ -821,16 +927,75 @@ footer{
       min-width: 138px;
     }
   }
-  #shortCutAbout ul {
-    overflow: scroll;
-    li {
-      min-width: 100px;
+  #shortCutAbout ul li a {
+    background-size: 170px !important;
+    height: 118px;
+    span {
+      padding-top: 73px;
     }
   } 
 }
 @media screen and (max-width: 480px)  {
-  
+  .nav-box {
+    padding-left: 0;
+  }
+  #shortCutCall .container > li {
+    padding: 5px 0;
+    min-width: 102px;
+    a span:nth-child(1), a span:nth-child(3) {
+      font-size: 13px;
+    }
+  }
+  #shortCutAbout {
+    margin: 0 auto 30px;
+    ul li a{
+      background-size: 135px !important;
+      height: 98px;
+      span {
+        font-size: 13px;
+        padding-top: 57px;
+      }
+    }
+  }
+  #ad {
+    .container {
+      flex-wrap: wrap;
+    }
+    .slick-dotted.slick-slider {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  } 
+  .tab {
+    height: 245px;
+  }
 }
-@media screen and (max-width: 375px)  {
-  
+@media screen and (max-width: 425px)  {
+  .ab_box ul li a {
+    padding: 0 10px;
+    span:first-child {
+      font-size: 14px;
+    }
+  } 
+  #shortCutAbout ul {
+    overflow: scroll;
+    li {
+      min-width: 75px;
+    }
+  }
+  #expertise {
+    ul li a span:nth-child(2) {
+      font-size: 14px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    h2:after{
+      margin: 7px auto 13px;
+    } 
+  }
 }
+// @media screen and (max-width: 375px)  {
+  
+// }
