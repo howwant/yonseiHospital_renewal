@@ -912,6 +912,9 @@ footer{
   } 
 }
 @media screen and (max-width: 700px)  {
+  #mainBanner div a {
+    height: 220px;
+}
   .tab {
     min-width: auto;
   }
@@ -935,7 +938,15 @@ footer{
     }
   } 
 }
+@media screen and (max-width: 520px)  {
+  #mainBanner div a {
+    height: 167px;
+}
+}
 @media screen and (max-width: 480px)  {
+  #mainBanner div a {
+    height: 151px;
+  }
   .nav-box {
     padding-left: 0;
   }
@@ -972,6 +983,9 @@ footer{
   }
 }
 @media screen and (max-width: 425px)  {
+  #mainBanner div a {
+    height: 135px;
+  }
   .ab_box ul li a {
     padding: 0 10px;
     span:first-child {
