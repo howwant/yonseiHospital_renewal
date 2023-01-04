@@ -736,6 +736,7 @@ footer{
   }
 }
 .sidemenu-box {
+  min-width: 280px;
   position: fixed;
   right: -100%;
   top: 0;
@@ -1010,6 +1011,3 @@ footer{
     } 
   }
 }
-// @media screen and (max-width: 375px)  {
-  
-// }

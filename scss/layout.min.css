@@ -748,6 +748,7 @@ footer .container > div .small span {
 }
 
 .sidemenu-box {
+  min-width: 280px;
   position: fixed;
   right: -100%;
   top: 0;
